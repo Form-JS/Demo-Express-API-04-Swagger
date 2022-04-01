@@ -1,5 +1,18 @@
 const fruits = require('./data/fruits.json');
 
+/**
+ * A Fruit
+ * @typedef {object} Fruit
+ * @property {number} id
+ * @property {string} name
+ */
+
+/**
+ * A Data for a Fruit
+ * @typedef {object} DataFruit
+ * @property {string} name.required 
+ */
+
 const fruitModel = {
     getById: (id) => {
         return fruits.rows.find(row => row.id === id);

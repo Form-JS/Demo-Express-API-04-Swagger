@@ -1,5 +1,5 @@
 {
-  "name": "demo-express-api-03-recap",
+  "name": "demo-express-api-04-swagger",
   "version": "0.1.0",
   "description": "Recap API",
   "main": "app.js",
@@ -11,7 +11,8 @@
   "author": "Aurélien",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "express-jsdoc-swagger": "^1.6.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

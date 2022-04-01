@@ -4,6 +4,11 @@ const fruitRouter = require('./routes/fruit-router');
 // Création du serveur
 const app = express();
 
+// Ajout de Swagger
+const expressJSDocSwagger = require('express-jsdoc-swagger');
+const swaggerSpec = require('./swagger/swagger-spec');
+expressJSDocSwagger(app)(swaggerSpec);
+
 // Configuration du serveur
 // - Middlewares
 app.use(express.json());
