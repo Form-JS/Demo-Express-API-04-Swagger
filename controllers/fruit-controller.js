@@ -25,9 +25,9 @@ const fruitController = {
         const targetId = parseInt(req.params.id);
         const fruit = fruitModel.getById(targetId);
 
-        if(!fruit) {
+        if (!fruit) {
             res.sendStatus(404);
-        } 
+        }
         res.status(200).json(fruit);
     },
 
@@ -37,6 +37,7 @@ const fruitController = {
      * @tags Fruit
      * @param {DataFruit} request.body.required - Fruit data - application/json
      * @return {Fruit} 200 - A new fruit - application/json
+     * @return 422 - Wrong data :o
      */
     insert: (req, res) => {
         if (!req.body.name) {
@@ -58,7 +59,7 @@ const fruitController = {
      * @tags Fruit
      * @param {number} id.path - Id of fruit
      * @param {DataFruit} request.body.required - Fruit data - application/json
-     * @return {Fruit} 501 - Not implemented
+     * @return 501 - Not implemented
      */
     update: (req, res) => {
         res.sendStatus(501);
